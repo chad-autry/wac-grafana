@@ -1,0 +1,23 @@
+{
+  "name": "wac-grafana",
+  "version": "0.0.1",
+  "description": "Containerized prometheus\node_exporter for the wac stack",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chad-autry/wac-grafana.git"
+  },
+  "keywords": [
+    "Docker",
+    "prometheus",
+    "node_exporter"
+  ],
+  "author": {
+    "name": "Chad Autry",
+    "url": "http://chad-autry.github.io/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chad-autry/wac-grafana/issues"
+  },
+  "homepage": "https://github.com/chad-autry/wac-grafana"
+}
