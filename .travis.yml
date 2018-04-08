@@ -1,0 +1,18 @@
+---
+sudo: required
+services:
+- docker
+language: node_js
+node_js:
+- 'node'
+env:
+  global:
+  - PROJECT: wac-grafana
+  - GH_REF: github.com/chad-autry/wac-grafana
+
+script:
+- docker build -t chadautry/$PROJECT:latest .
+- if [[ ! -z "$TRAVIS_TAG" ]]; then docker tag chadautry/$PROJECT:latest chadautry/$PROJECT:$TRAVIS_TAG ; fi
+after_success:
+- docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+- docker push chadautry/$PROJECT
