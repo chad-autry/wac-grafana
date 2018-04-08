@@ -2,7 +2,7 @@
 FROM        alpine:3.7
 ENV GRAFANA_VERSION 5.0.4
 RUN         apk add  --no-cache ca-certificates openssl tar && \
-            wget wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-$GRAFANA_VERSION.linux-x64.tar.gz && \
+            wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-$GRAFANA_VERSION.linux-x64.tar.gz && \
             tar xzvf grafana && \
             mv grafana-$GRAFANA_VERSION.linux-x64 /opt/grafana && \
             apk del --purge tar openssl && \
