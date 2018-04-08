@@ -8,6 +8,8 @@ RUN         apk add  --no-cache ca-certificates openssl tar && \
             apk del --purge tar openssl && \
             rm -Rf grafana-$GRAFANA_VERSION.linux-x64.tar.gz
 
+EXPOSE 3000
+
 WORKDIR     /opt/grafana
 
 ENTRYPOINT  ["/opt/grafana/bin/grafana-server", "web"]
