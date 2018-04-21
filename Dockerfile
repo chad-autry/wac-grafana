@@ -17,4 +17,4 @@ EXPOSE 3000
 
 WORKDIR     /opt/grafana
 
-ENTRYPOINT  ["/opt/grafana/bin/grafana-server", "web"]
+ENTRYPOINT  ["/opt/grafana/bin/grafana-server"]
